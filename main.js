@@ -1,15 +1,11 @@
-window.onload = () => {
-    document.body.classList.remove("container");
-};
-
-window.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", async function () {
     const lyrics = [
         "Oh, I know I'm probably much too late",
         "To try and apologize for my mistakes",
         "But I just want you to know",
     ];
 
-    const delay = 45;
+    const delay = 45; // adjust the speed here
     const lyricsElement = document.getElementById("lyrics");
 
     async function displayLyrics() {
@@ -33,17 +29,19 @@ window.addEventListener('DOMContentLoaded', function () {
 
             await new Promise((resolve) => setTimeout(resolve, delay * 10));
         }
+    }
 
-        let content1 = document.querySelector('.lirik');
-        let content2 = document.querySelector('.flowers');
+    await displayLyrics();
+
+    setTimeout(function () {
+        var content1 = document.querySelector('.lirik');
+        var content2 = document.querySelector('.flowers');
 
         if (content1 && content2) {
+            // Mengganti isi elemen dengan konten dari kelas kedua
             content1.innerHTML = content2.innerHTML;
         } else {
             console.error('Elemen tidak ditemukan');
         }
-    }
-
-    // Panggil fungsi untuk menampilkan lirik
-    displayLyrics();
+    }, 1200);
 });
