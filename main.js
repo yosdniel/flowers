@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async function () {
     const lyrics = [
         "Oh, I know I'm probably much too late",
         "To try and apologize for my mistakes",
@@ -32,13 +32,16 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Menampilkan lirik
-    displayLyrics();
+    await displayLyrics();
 
     // Menunggu beberapa detik sebelum menampilkan elemen flowers
     setTimeout(function () {
         var content2 = document.querySelector('.flowers');
         if (lyricsElement && content2) {
-            lyricsElement.innerHTML = content2.innerHTML;
+            // Menambahkan kelas "hidden" ke elemen lirik
+            lyricsElement.classList.add('hidden');
+            // Menghapus kelas "hidden" dari elemen flowers
+            content2.classList.remove('hidden');
         } else {
             console.error('Elemen tidak ditemukan');
         }
