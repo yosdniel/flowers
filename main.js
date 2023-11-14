@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Menunggu beberapa detik sebelum menampilkan elemen flowers
     setTimeout(function () {
-        var content1 = document.getElementById('lyrics');
+        var content1 = document.getElementById('lirik');
         var content2 = document.getElementById('bunga');
         if (content1 && content2) {
             // Mengganti isi elemen dengan konten dari kelas kedua
