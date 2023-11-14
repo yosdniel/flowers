@@ -36,10 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 setTimeout(function () {
-    var lirik = document.querySelector('.lirik');
-    var flowers = document.querySelector('.flowers');
+    var content1 = document.querySelector('.lirik');
+    var content2 = document.querySelector('.flowers');
 
-    // Mengganti isi elemen dengan konten dari kelas kedua
-    lirik.innerHTML = flowers.innerHTML;
+    if (content1 && content2) {
+        // Mengganti isi elemen dengan konten dari kelas kedua
+        content1.innerHTML = content2.innerHTML;
+    } else {
+        console.error('Elemen tidak ditemukan');
+    }
 }, 400);
 });
