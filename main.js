@@ -4,11 +4,9 @@ onload = () =>{
 
 document.addEventListener("DOMContentLoaded", function () {
     const lyrics = [
-        "your lyricss.....",
-        "your lyricss.....",
-        "your lyricss.....",
-        "your lyricss.....",
-        "your lyricss....."
+        "Oh, I know I'm probably much too late",
+        "To try and apologize for my mistakes",
+        "But I just want you to know",
     ];
 
     const delay = 45; // adjust the speed here
@@ -39,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         setTimeout(function () {
             window.location.href = "flower.html"; //set here your next target html
-        }, 700);
+        }, 400);
     }
     
     displayLyrics();
