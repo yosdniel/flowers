@@ -29,4 +29,22 @@ document.addEventListener("DOMContentLoaded", async function () {
             lyricsElement.textContent = "";
         }
 
-       
+ // Panggil fungsi setelah selesai menampilkan lirik
+        showFlowers();
+    }
+
+    // Menampilkan lirik
+    await displayLyrics();
+
+    // Fungsi untuk menampilkan elemen bunga
+    function showFlowers() {
+        var content1 = document.getElementById('lirik');
+        var content2 = document.getElementById('bunga');
+        if (content1 && content2) {
+            content1.innerHTML = content2.innerHTML;
+            }, 2000);
+        } else {
+            console.error('Elemen tidak ditemukan');
+        }
+    }
+});
