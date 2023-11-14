@@ -32,12 +32,11 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Menunggu beberapa detik sebelum menampilkan elemen flowers
     setTimeout(function () {
+        var content1 = document.getElementById('lyrics');
         var content2 = document.getElementById('bunga');
-        if (lyricsElement && content2) {
-            // Menghapus elemen lirik dari DOM
-            lyricsElement.innerHTML = '';
-            // Menghapus kelas "hidden" dari elemen flowers
-            content2.classList.remove('hidden');
+        if (content1 && content2) {
+            // Mengganti isi elemen dengan konten dari kelas kedua
+            content1.innerHTML = content2.innerHTML;
         } else {
             console.error('Elemen tidak ditemukan');
         }
