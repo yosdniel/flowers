@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     ];
 
     const delay = 45; // Sesuaikan kecepatan di sini
-    const lyricsElement = document.getElementById('lyrics');
+    var lyricsElement = document.getElementById('lyrics');
 
     async function displayLyrics() {
         for (const line of lyrics) {
@@ -24,23 +24,27 @@ document.addEventListener("DOMContentLoaded", async function () {
             lyricsElement.appendChild(document.createElement("br"));
 
             await new Promise((resolve) => setTimeout(resolve, delay * 10));
+
+            // Hapus karakter sebelum menambahkan baris berikutnya
+            lyricsElement.textContent = "";
         }
+
+        // Panggil fungsi setelah selesai menampilkan lirik
+        showFlowers();
     }
 
     // Menampilkan lirik
     await displayLyrics();
 
-    // Fungsi untuk menampilkan elemen bunga setelah lirik
+    // Fungsi untuk menampilkan elemen bunga
     function showFlowers() {
-        var content1 = document.getElementById('lyrics');
+        var content1 = document.getElementById('lirik');
         var content2 = document.getElementById('bunga');
         if (content1 && content2) {
-            content1.innerHTML += content2.innerHTML; // Menggunakan += untuk menambahkan elemen bunga tanpa menghapus lirik
+            content1.innerHTML = content2.innerHTML;
         } else {
             console.error('Elemen tidak ditemukan');
         }
     }
-
-    // Panggil fungsi setelah selesai menampilkan lirik
     setTimeout(showFlowers, 2000); // Menunggu 2000 milidetik (2 detik) sebelum menampilkan elemen bunga
 });
