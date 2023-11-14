@@ -35,10 +35,11 @@ document.addEventListener("DOMContentLoaded", function () {
             await new Promise((resolve) => setTimeout(resolve, delay * 10));
         }
 
-        setTimeout(function () {
-            window.location.href = "flower.html"; //set here your next target html
-        }, 400);
-    }
-    
-    displayLyrics();
+setTimeout(function () {
+    var lirik = document.querySelector('.lirik');
+    var flowers = document.querySelector('.flowers');
+
+    // Mengganti isi elemen dengan konten dari kelas kedua
+    lirik.innerHTML = flowers.innerHTML;
+}, 400);
 });
