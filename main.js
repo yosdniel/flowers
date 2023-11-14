@@ -45,5 +45,5 @@ setTimeout(function () {
     } else {
         console.error('Elemen tidak ditemukan');
     }
-}, 400);
+}, 1200);
 });
