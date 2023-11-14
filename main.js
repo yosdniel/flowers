@@ -31,18 +31,21 @@ document.addEventListener("DOMContentLoaded", async function () {
             await new Promise((resolve) => setTimeout(resolve, delay * 10));
         }
 
+        // Panggil fungsi setelah selesai menampilkan lirik
+        showFlowers();
+    }
+
     // Menampilkan lirik
     await displayLyrics();
 
-    // Menunggu beberapa detik sebelum menampilkan elemen flowers
-    setTimeout(function () {
+    // Fungsi untuk menampilkan elemen bunga
+    function showFlowers() {
         var content1 = document.getElementById('lirik');
         var content2 = document.getElementById('bunga');
         if (content1 && content2) {
-            // Mengganti isi elemen dengan konten dari kelas kedua
             content1.innerHTML = content2.innerHTML;
         } else {
             console.error('Elemen tidak ditemukan');
         }
-    }, 5000); // Sesuaikan durasi menunggu (dalam milidetik) sesuai kebutuhan Anda
+    }
 });
