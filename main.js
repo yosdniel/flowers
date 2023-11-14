@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         setTimeout(function () {
-            window.location.href = "flowers.html"; //set here your next target html
+            window.location.href = "flower.html"; //set here your next target html
         }, 700);
     }
     
