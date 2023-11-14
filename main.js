@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", async function () {
+document.addEventListener("DOMContentLoaded", function () {
     const lyrics = [
         "Oh, I know I'm probably much too late",
         "To try and apologize for my mistakes",
@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     ];
 
     const delay = 45; // adjust the speed here
-    const lyricsElement = document.getElementById("lyrics");
+    var lyricsElement = document.getElementById('lyrics');
 
     async function displayLyrics() {
         for (const line of lyrics) {
@@ -43,5 +43,4 @@ document.addEventListener("DOMContentLoaded", async function () {
             console.error('Elemen tidak ditemukan');
         }
     }, 5000); // Ubah durasi menunggu (dalam milidetik) sesuai kebutuhan Anda
-});
 });
