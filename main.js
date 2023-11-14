@@ -20,11 +20,12 @@ document.addEventListener("DOMContentLoaded", async function () {
                 charElement.style.animation = "";
             }
 
+            // Tambahkan garis baru setelah satu baris lirik ditampilkan
             lyricsElement.appendChild(document.createElement("br"));
 
             await new Promise((resolve) => setTimeout(resolve, delay * 10));
 
-            // Hapus karakter dan garis baru sebelum menambahkan baris berikutnya
+            // Hapus karakter sebelum menambahkan baris berikutnya
             lyricsElement.textContent = "";
         }
 
