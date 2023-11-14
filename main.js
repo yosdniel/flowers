@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     ];
 
     const delay = 45; // Sesuaikan kecepatan di sini
-    const lyricsElement = document.getElementById('lirik');
+    const lyricsElement = document.getElementById('lyrics');
 
     async function displayLyrics() {
         for (const line of lyrics) {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Fungsi untuk menampilkan elemen bunga
     function showFlowers() {
-        var content1 = document.getElementById('lirik'); 
+        var content1 = document.getElementById('lyrics'); 
         var content2 = document.getElementById('bunga');
         if (content1 && content2) {
             // Tambahkan lirik ke dalam elemen lirik
