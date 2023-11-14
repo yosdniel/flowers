@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         "But I just want you to know",
     ];
 
-    const delay = 45; // adjust the speed here
+    const delay = 45; // Sesuaikan kecepatan di sini
     var lyricsElement = document.getElementById('lyrics');
 
     async function displayLyrics() {
@@ -24,10 +24,6 @@ document.addEventListener("DOMContentLoaded", async function () {
             lyricsElement.appendChild(document.createElement("br"));
 
             await new Promise((resolve) => setTimeout(resolve, delay * 10));
-
-            lyricsElement.textContent = "";
-
-            await new Promise((resolve) => setTimeout(resolve, delay * 10));
         }
     }
 
@@ -36,14 +32,14 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     // Menunggu beberapa detik sebelum menampilkan elemen flowers
     setTimeout(function () {
-        var content2 = document.querySelector('.flowers');
+        var content2 = document.getElementById('bunga');
         if (lyricsElement && content2) {
-            // Menambahkan kelas "hidden" ke elemen lirik
-            lyricsElement.classList.add('hidden');
+            // Menghapus elemen lirik dari DOM
+            lyricsElement.innerHTML = '';
             // Menghapus kelas "hidden" dari elemen flowers
             content2.classList.remove('hidden');
         } else {
             console.error('Elemen tidak ditemukan');
         }
-    }, 5000); // Ubah durasi menunggu (dalam milidetik) sesuai kebutuhan Anda
+    }, 5000); // Sesuaikan durasi menunggu (dalam milidetik) sesuai kebutuhan Anda
 });
