@@ -45,6 +45,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             const flowersElement = document.createElement("div");
             flowersElement.innerHTML = content2.innerHTML;
             content1.appendChild(flowersElement);
+            }, 2000);
+
         } else {
             console.error('Elemen tidak ditemukan');
         }
