@@ -1,8 +1,8 @@
-onload = () =>{
-        document.body.classList.remove("container");
+window.onload = () => {
+    document.body.classList.remove("container");
 };
 
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener('DOMContentLoaded', function () {
     const lyrics = [
         "Oh, I know I'm probably much too late",
         "To try and apologize for my mistakes",
@@ -35,15 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
             await new Promise((resolve) => setTimeout(resolve, delay * 10));
         }
 
-setTimeout(function () {
-    var content1 = document.querySelector('.lirik');
-    var content2 = document.querySelector('.flowers');
+    setTimeout(function () {
+        var content1 = document.querySelector('.lirik');
+        var content2 = document.querySelector('.flowers');
 
-    if (content1 && content2) {
-        // Mengganti isi elemen dengan konten dari kelas kedua
-        content1.innerHTML = content2.innerHTML;
-    } else {
-        console.error('Elemen tidak ditemukan');
-    }
-}, 1200);
+        if (content1 && content2) {
+            content1.innerHTML = content2.innerHTML;
+        } else {
+            console.error('Elemen tidak ditemukan');
+        }
+    }, 1200);
 });
