@@ -31,17 +31,17 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
     }
 
-    await displayLyrics();
+    // Menampilkan lirik
+    displayLyrics();
 
+    // Menunggu beberapa detik sebelum menampilkan elemen flowers
     setTimeout(function () {
-        var content1 = document.querySelector('.lirik');
         var content2 = document.querySelector('.flowers');
-
-        if (content1 && content2) {
-            // Mengganti isi elemen dengan konten dari kelas kedua
-            content1.innerHTML = content2.innerHTML;
+        if (lyricsElement && content2) {
+            lyricsElement.innerHTML = content2.innerHTML;
         } else {
             console.error('Elemen tidak ditemukan');
         }
-    }, 1200);
+    }, 5000); // Ubah durasi menunggu (dalam milidetik) sesuai kebutuhan Anda
+});
 });
